@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kanban - Task Mangement System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="jquery-ui/themes/base/jquery.ui.all.css">
 	<script src="jquery-ui/jquery-1.7.2.js"></script>
 	<script src="jquery-ui/ui/jquery.ui.core.js"></script>
@@ -11,8 +12,19 @@
 	<script src="jquery-ui/ui/jquery.ui.sortable.js"></script>
 	
 	<!--link rel="stylesheet" href="jquery-ui/css/style.css"-->
-    <!--link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"-->
-    
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.new.css">	
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap-responsive.css">
+    <script src="lib/bootstrap/js/bootstrap-alerts.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-buttons.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-tabs.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-twipsy.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-collapse.js"></script>
+        
 	<style>
 	.column { width: 170px; /*float: left;*/ padding-bottom: 100px; margin: 3px; padding: 5px; border-left: 2px lightgray solid; vertical-align: top;}
 	.box { margin: 0 1em 1em 0; }
@@ -48,90 +60,126 @@
 	
 </head>
 <body>
-<div class="demo">
-<table border="0" width="100%">
-<tr style="font-weight:bold;text-align:center;font-size: 20px;">
-    <td>Backlog</td>
-    <td>In-progress</td>
-    <td>Testing</td>
-    <td>Buzzz</td>
-    <td>Deploying</td>
-</tr>
-<tr>
 
-    <td class="column">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Open Source</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Sale</a></li>
+            <li><a href="#about">Project</a></li>
+            <li><a href="#contact">Human Resource</a></li>
+          </ul>
+          <p class="pull-right">Logged in as <a href="#">username</a></p>
+        </div>
+      </div>
+    </div>
 
-	    <div class="box">
-		    <div class="box-header">link with likedin</div>
-		    <div class="box-content"><span class="label label-warning">Success</span>Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+
+<div class="container-fluid" style="margin-top:50px;">
+<div class="sidebar">
+    <div class="well">
+    <h1>Open Apps</h1>
+    <hr/>
+    </div>
+</div>
+<div class="content">
+    <div class="demo" >
+     <ul class="breadcrumb">
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+         <li><a href="#">Middle page</a> <span class="divider">/</span></li>
+         <li><a href="#">Another one</a> <span class="divider">/</span></li>
+         <li class="active">You are here</li>
+     </ul>                
+                    
+    <table border="0" width="100%" class="zebra-striped">
+    <tr style="font-weight:bold;text-align:center;font-size: 20px;">
+        <td>Backlog</td>
+        <td>In-progress</td>
+        <td>Testing</td>
+        <td>Buzzz</td>
+        <td>Deploying</td>
+    </tr>
+    <tr>
+
+        <td class="column">
+
+	        <div class="box">
+		       <span class="badge badge-important">6</span>
+		       <span class="label important">Important</span>Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   
+	        </div>
 	
-	    <div class="box">
-		    <div class="box-header">News</div>
-		    <div class="box-content"><span class="badge badge-important">6</span>Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">
+		        <div class="alert-message warning">
+                  <a class="close" href="#">×</a>
+                  <p><strong>Holy guacamole!</strong> Best check yo self, you’re not looking too good.</p>
+                </div>
+	        </div>
 
-    </td>
+        </td>
 
-    <td class="column">
+        <td class="column">
 
-	    <div class="box">
-		    <div class="box-header">Shopping</div>
-		    <div class="box-content"><span class="label label-success">Success</span>Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">
+		        <div class="box-header">Shopping</div>
+		        <div class="box-content"><span class="label label-success">Success</span>Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
+	        </div>
 
-    </td>
+        </td>
 
-    <td class="column">
+        <td class="column">
 
-	    <div class="box">
-		    <div class="box-header">Links</div>
-		    <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">
+		        <div class="box-header">Links</div>
+		        <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
+	        </div>
 	
-	    <div class="box">
-		    <div class="box-header">Images</div>
-		    <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">
+		        <div class="box-header">Images</div>
+		        <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
+	        </div>
 
-        <div class="box">
-		    <div class="box-header">Task 1</div>
-		    <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
-    </td>
+            <div class="box">
+		        <div class="box-header">Task 1</div>
+		        <div class="box-content"> Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
+	        </div>
+        </td>
 
-    <td class="column">
+        <td class="column">
 
 
-    </td>
+        </td>
 
-    <td class="column">
+        <td class="column">
 
-	    <div class="box">
-		    <div class="box-header">Links</div>
-		    <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">		     
+		        <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   
+		        Work Progress : <div class="progress progress-striped active">
+                     <div class="bar" style="width: 60%;"></div>
+                 </div>
+		        </div>		    
+	        </div>
 	
-	    <div class="box">
-		    <div class="box-header">Images</div>
-		    <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
-	    </div>
+	        <div class="box">
+		        <div class="box-header">Images</div>
+		        <div class="box-content">Task description: save tree, save life.   , save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   ,save tree, save life.   </div>
+	        </div>
 
-    </td>
+        </td>
 
-</tr>
-</table>
-</div><!-- End demo -->
+    </tr>
+    </table>
+    </div><!-- End demo -->
+</div>
+</div>
 
-
-
-<div class="demo-description">
-<p>
-	Very simple way to integrate kanban with application. Email : tejas.tank.mca@gmail.com<br/><br/>
-	http://github.com/tejastank<br/>
-	https://www.facebook.com/tejaskumar.tank<br/>
-</p>
-</div><!-- End demo-description -->
+    <div class="alert-message block-message">
+    <p >
+	    Very simple way to integrate kanban with application. Email : tejas.tank.mca@gmail.com<br/><br/>
+	    <span class="label important">http://github.com/tejastank</span><br/>
+	    <span class="label notice">https://www.facebook.com/tejaskumar.tank</span><br/>
+    </p>
+    </div><!-- End demo-description -->
 
 </body>
 </html>
